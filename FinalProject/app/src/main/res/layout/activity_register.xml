@@ -31,21 +31,45 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/outlinedEditTextusername"
+        android:id="@+id/outlinedEditTextusernameLogin"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
         android:hint="@string/username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/outlinedEditTextname">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextusernameRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_profile" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedEditTextname"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:hint="@string/name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/TextViewCreateAccount">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextusernameRegister"
+            android:id="@+id/editTextnameRegister"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/ic_profile" />
@@ -59,13 +83,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
         android:hint="@string/email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/outlinedEditTextusername">
+        app:layout_constraintTop_toBottomOf="@+id/outlinedEditTextusernameLogin">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextEmailRegister"
@@ -82,7 +106,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
         android:hint="@string/password"
         app:layout_constraintEnd_toEndOf="parent"
@@ -92,10 +116,10 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextpasswordRegister"
-            android:inputType="textPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableStart="@drawable/ic_lock" />
+            android:drawableStart="@drawable/ic_lock"
+            android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -103,8 +127,8 @@
         android:id="@+id/textViewJoind"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
         android:text="@string/already_have_an_account"
         app:layout_constraintEnd_toStartOf="@+id/textViewSignIn"
         app:layout_constraintTop_toBottomOf="@+id/outlinedEditTextPassword" />
@@ -113,7 +137,7 @@
         android:id="@+id/textViewSignIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="32dp"
         android:text="@string/sign_in"
         android:textColor="@color/black"
@@ -125,13 +149,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
         android:text="@string/sign_up"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/outlinedEditTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewJoind" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

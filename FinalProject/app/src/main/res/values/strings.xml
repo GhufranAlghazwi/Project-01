@@ -15,10 +15,8 @@
     <string name="profile">profile</string>
     <string name="account">account</string>
     <string name="update">update</string>
-    <string name="email">Email</string>
     <string name="description">Description</string>
     <string name="your_description">Your Description:</string>
-    <string name="username">Username</string>
     <string name="name">Name</string>
     <string name="joined">Joined</string>
-</resources>
+=</resources>

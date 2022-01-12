@@ -20,12 +20,12 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/imageViewProductDetails"
+            android:id="@+id/imageViewProfile"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:srcCompat="@drawable/ic_profile" />
 
     </androidx.cardview.widget.CardView>
 
@@ -51,7 +51,7 @@
         android:text="@string/joined"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/outlinedEditTextusername" />
+        app:layout_constraintTop_toBottomOf="@+id/outlinedEditTextDesc" />
 
     <TextView
         android:id="@+id/textViewName_Profile"
@@ -65,7 +65,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textViewUsername_Profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -87,7 +87,7 @@
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/outlinedEditTextusername"
+        android:id="@+id/outlinedEditTextDesc"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="375dp"
         android:layout_height="64dp"
@@ -101,7 +101,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewDesc">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextusernameLogin"
+            android:id="@+id/editTextDesc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
@@ -116,6 +116,19 @@
         android:text="Date"
         android:textSize="16sp"
         app:layout_constraintStart_toEndOf="@+id/textViewJoind"
-        app:layout_constraintTop_toBottomOf="@+id/outlinedEditTextusername" />
+        app:layout_constraintTop_toBottomOf="@+id/outlinedEditTextDesc" />
+
+    <Button
+        android:id="@+id/buttonUpdate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/update"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/outlinedEditTextDesc" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

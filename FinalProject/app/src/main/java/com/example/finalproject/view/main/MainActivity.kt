@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.finalproject.R
 import com.example.finalproject.databinding.ActivityMainBinding
+import com.example.finalproject.view.Fragment.Profile.ProfileFragment
 import com.example.finalproject.view.Fragment.home.HomeFragment
 
 class MainActivity : AppCompatActivity() {
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.profile -> {
                     supportFragmentManager.beginTransaction().replace(R.id.fragmentContainerView,
-                        HomeFragment()
+                        ProfileFragment()
                     ).commit()
                     true
                 }

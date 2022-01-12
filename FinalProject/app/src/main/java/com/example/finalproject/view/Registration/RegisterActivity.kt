@@ -33,6 +33,8 @@ class RegisterActivity : AppCompatActivity() {
                         val user = hashMapOf(
                             "username" to binding.editTextusernameRegister.text.toString(),
                             "email" to auth.currentUser?.email,
+                            "name" to binding.editTextnameRegister.text.toString()
+
                         )
                         db.collection("user").document(auth.currentUser?.uid.toString())
                             .set(user)
