@@ -1,10 +1,11 @@
-package com.example.finalproject
+package com.example.finalproject.view.splash
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import com.example.finalproject.databinding.ActivitySplashScreenBinding
+import com.example.finalproject.view.main.MainActivity
 
 class Splash_Screen : AppCompatActivity() {
     lateinit var binding: ActivitySplashScreenBinding
