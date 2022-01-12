@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import com.example.finalproject.databinding.ActivitySplashScreenBinding
-import com.example.finalproject.view.main.MainActivity
+import com.example.finalproject.view.Login.LoginActivity
 
 class Splash_Screen : AppCompatActivity() {
     lateinit var binding: ActivitySplashScreenBinding
@@ -14,7 +14,7 @@ class Splash_Screen : AppCompatActivity() {
         binding = ActivitySplashScreenBinding.inflate(layoutInflater)
 
         Handler().postDelayed({
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()
         }, 3000)

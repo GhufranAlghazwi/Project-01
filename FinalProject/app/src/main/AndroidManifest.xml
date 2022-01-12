@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalProject">
         <activity
+            android:name=".view.Registration.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.Login.LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.splash.Splash_Screen"
             android:exported="true">
             <intent-filter>
@@ -20,7 +26,7 @@
         </activity>
         <activity
             android:name=".view.main.MainActivity"
-            android:exported="true"/>
+            android:exported="true" />
     </application>
 
 </manifest>
