@@ -1,4 +1,4 @@
-package com.example.finalproject.view.home
+package com.example.finalproject.view.Fragment.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,14 +9,12 @@ import com.example.finalproject.R
 
 class HomeFragment : Fragment() {
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        var v = inflater.inflate(R.layout.fragment_home, container, false)
-
+        val v = inflater.inflate(R.layout.fragment_home, container, false)
         return v
     }
 

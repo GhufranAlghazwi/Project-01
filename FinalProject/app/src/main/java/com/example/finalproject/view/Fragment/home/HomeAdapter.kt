@@ -1,4 +1,4 @@
-package com.example.finalproject.view.home
+package com.example.finalproject.view.Fragment.home
 
 import android.view.LayoutInflater
 import android.view.View

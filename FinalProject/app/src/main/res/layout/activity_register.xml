@@ -92,11 +92,33 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextpasswordRegister"
+            android:inputType="textPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/ic_lock" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textViewJoind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/already_have_an_account"
+        app:layout_constraintEnd_toStartOf="@+id/textViewSignIn"
+        app:layout_constraintTop_toBottomOf="@+id/outlinedEditTextPassword" />
+
+    <TextView
+        android:id="@+id/textViewSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/sign_in"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/outlinedEditTextPassword" />
 
     <Button
         android:id="@+id/buttonSignUp"

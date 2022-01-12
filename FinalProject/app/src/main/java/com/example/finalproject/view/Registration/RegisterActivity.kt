@@ -8,6 +8,7 @@ import android.util.Log
 import android.widget.Toast
 import com.example.finalproject.R
 import com.example.finalproject.databinding.ActivityRegisterBinding
+import com.example.finalproject.view.Login.LoginActivity
 import com.example.finalproject.view.main.MainActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -48,6 +49,13 @@ class RegisterActivity : AppCompatActivity() {
                     Log.d(ContentValues.TAG, "")
                 }
         }
+
+        binding.textViewSignIn.setOnClickListener {
+            var intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
+
+
         setContentView(binding.root)
 
     }

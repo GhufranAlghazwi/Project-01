@@ -7,6 +7,18 @@
     tools:context=".view.main.MainActivity">
 
 
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="com.example.finalproject.view.Fragment.home.HomeFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bNavBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/fragment_home" />
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -15,17 +27,6 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:menu="@menu/main_menu" />
-
-    <FrameLayout
-        android:id="@+id/mFrameLayout"
-        android:layout_width="409dp"
-        android:layout_height="673dp"
-        app:layout_constraintBottom_toTopOf="@+id/bNavBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-    </FrameLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
