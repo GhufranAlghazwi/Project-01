@@ -33,9 +33,10 @@ lateinit var image: ImageView
         val username = v.findViewById<TextView>(R.id.textViewUsername_Profile)
         val Desc = v.findViewById<TextInputEditText>(R.id.editTextDesc)
         val logoutButton = v.findViewById<ImageButton>(R.id.imageButtonLogout)
-        image = v.findViewById<ImageView>(R.id.imageViewProfile)
+        image = v.findViewById(R.id.imageViewProfile)
         val dateTV = v.findViewById<TextView>(R.id.textViewDate)
         val imageButton = v.findViewById<ImageButton>(R.id.imageButton)
+        val updateButton = v.findViewById<Button>(R.id.buttonUpdate)
         //Picasso.get().load(Profile.).placeholder(R.drawable.ic_launcher_background).into(image)
 
         val vm: ProfileFragmentViewModel by viewModels()
@@ -45,6 +46,7 @@ lateinit var image: ImageView
             name.setText(it.Name)
 
         })
+        updateButton.setOnClickListener { vm.updateUserAccount() }
 
         imageButton.setOnClickListener{
 

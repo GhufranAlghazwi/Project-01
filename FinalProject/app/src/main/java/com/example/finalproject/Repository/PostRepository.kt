@@ -24,7 +24,8 @@ class PostRepository {
                             document.getString("avatar"),
                             document.getString("postBody")!!,
                             document.getDouble("likes")!!,
-                            document.getDate("postTime")
+                            document.getDate("postTime"),
+
                         )
                     )
                 }

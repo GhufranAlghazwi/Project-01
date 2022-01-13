@@ -18,9 +18,7 @@ import com.example.finalproject.view.main.MainActivity
 import com.example.finalproject.view.newPost.NewPostActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import androidx.core.content.ContextCompat.getSystemService
-
-
-
+import com.example.finalproject.model.Post
 
 class HomeFragment : Fragment() {
 
@@ -28,6 +26,7 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         // Inflate the layout for this fragment
         val v = inflater.inflate(R.layout.fragment_home, container, false)
 
@@ -45,5 +44,7 @@ class HomeFragment : Fragment() {
 
         return v
     }
+
+
 
 }

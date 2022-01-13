@@ -1,5 +1,7 @@
 package com.example.finalproject.Repository
 
+import android.content.ContentValues
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -44,6 +46,17 @@ class Repository{
     //upload image
     fun uploadimage(){
 
+    }
+
+    //update profile
+    fun updateUserProfile(image: String, Desc: String){
+        db.collection("user").document(auth.currentUser?.uid.toString())
+            .update(mapOf(
+                "image" to image,
+                "Description" to Desc
+            ))
+            .addOnSuccessListener { Log.d(ContentValues.TAG, "updateUserAccount: ------update user account") }
+            .addOnFailureListener { Log.d(ContentValues.TAG, "updateUserAccount: ------cannot update user account") }
     }
 
 

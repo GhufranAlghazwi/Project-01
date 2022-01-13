@@ -16,6 +16,12 @@ class ProfileFragmentViewModel: ViewModel(){
         return user.getUserData()
     }
 
+    fun updateUserAccount(){
+        return user.updateUserProfile("","")
+    }
+
+
+
 
 
 
