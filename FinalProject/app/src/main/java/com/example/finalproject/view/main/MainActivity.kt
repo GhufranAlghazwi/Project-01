@@ -6,7 +6,6 @@ import com.example.finalproject.R
 import com.example.finalproject.databinding.ActivityMainBinding
 import com.example.finalproject.view.Fragment.Profile.ProfileFragment
 import com.example.finalproject.view.Fragment.home.HomeFragment
-import com.example.finalproject.view.Fragment.newpost.NewPostFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,12 +26,12 @@ class MainActivity : AppCompatActivity() {
                     ).commit()
                     true
                 }
-                R.id.AddPost ->{
-                    supportFragmentManager.beginTransaction().replace(R.id.fragmentContainerView,
-                        NewPostFragment()
-                    ).commit()
-                    true
-                }
+//                R.id.AddPost ->{
+//                    supportFragmentManager.beginTransaction().replace(R.id.fragmentContainerView,
+//                        NewPostFragment()
+//                    ).commit()
+//                    true
+//                }
                 else -> false
             }
         }

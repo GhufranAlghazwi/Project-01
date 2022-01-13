@@ -3,6 +3,7 @@ package com.example.finalproject.view.Fragment.home
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finalproject.R
 import com.example.finalproject.model.Post
@@ -22,5 +23,6 @@ class HomeAdapter(var data: List<Post>) : RecyclerView.Adapter<HomeAdapterHolder
 }
 
 class HomeAdapterHolder(v: View) : RecyclerView.ViewHolder(v) {
+    var name = v.findViewById<TextView>(R.id.nameTextView)
 }
 

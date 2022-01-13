@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FinalProject">
         <activity
+            android:name=".view.newPost.NewPostActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.Registration.RegisterActivity"
             android:exported="false" />
         <activity
