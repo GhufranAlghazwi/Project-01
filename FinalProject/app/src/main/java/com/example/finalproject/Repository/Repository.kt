@@ -11,6 +11,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
+import java.util.*
 
 class Repository{
     var db = FirebaseFirestore.getInstance()
@@ -30,6 +31,8 @@ class Repository{
                             dr.getString("email").toString(),
                             dr.getString("username").toString(),
                             dr.getString("name").toString(),
+                            dr.getString("avatar").toString()
+                            //dr.getDate("date").toString() as Date
 
                             )
                     )
@@ -42,4 +45,6 @@ class Repository{
     fun uploadimage(){
 
     }
+
+
 }

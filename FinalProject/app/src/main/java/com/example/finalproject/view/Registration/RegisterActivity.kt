@@ -14,6 +14,10 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import java.lang.String.format
+import java.text.DateFormat
+import java.text.MessageFormat.format
+import java.util.*
 
 class RegisterActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
@@ -21,6 +25,19 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         val binding = ActivityRegisterBinding.inflate(layoutInflater)
+
+        //Joined date
+        val date = Date()
+
+        val c = Calendar.getInstance()
+        val year = c.get(Calendar.YEAR)
+        val month = c.get(Calendar.MONTH)
+        val day = c.get(Calendar.DAY_OF_MONTH)
+        val today = Date(year,month,day)
+        val months = month + 1
+
+        val d = ("${months}/${year}")
+        println(d)
 
         auth = Firebase.auth
         val db = Firebase.firestore
@@ -33,7 +50,9 @@ class RegisterActivity : AppCompatActivity() {
                         val user = hashMapOf(
                             "username" to binding.editTextusernameRegister.text.toString(),
                             "email" to auth.currentUser?.email,
-                            "name" to binding.editTextnameRegister.text.toString()
+                            "name" to binding.editTextnameRegister.text.toString(),
+                            "date" to date
+
 
                         )
                         db.collection("user").document(auth.currentUser?.uid.toString())
