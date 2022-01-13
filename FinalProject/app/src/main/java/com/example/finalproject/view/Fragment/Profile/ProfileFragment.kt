@@ -41,7 +41,7 @@ lateinit var image: ImageView
         val vm: ProfileFragmentViewModel by viewModels()
         vm.getUserAccount().observe(this,{
 
-            username.setText(it.Username)
+            username.setText("@${it.Username}")
             name.setText(it.Name)
 
         })
