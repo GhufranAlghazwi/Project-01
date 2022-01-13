@@ -11,5 +11,6 @@ data class Profile(
     val Username: String?,
     val Name: String?,
     val avatar: String?,
-
+    val description: String?,
+    val date: String?
 )

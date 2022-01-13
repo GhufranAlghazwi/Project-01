@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.recyclerview.widget.RecyclerView
@@ -33,10 +34,11 @@ class Repository{
                             dr.getString("email").toString(),
                             dr.getString("username").toString(),
                             dr.getString("name").toString(),
-                            dr.getString("avatar").toString()
-                            //dr.getDate("date").toString() as Date
+                            dr.getString("image").toString(),
+                            dr.getString("description").toString(),
+                            dr.getDate("date").toString()
 
-                            )
+                        )
                     )
                 }
             }
@@ -49,14 +51,20 @@ class Repository{
     }
 
     //update profile
-    fun updateUserProfile(image: String, Desc: String){
+    fun updateUserProfile(avatar: String, desc: String): LiveData<Boolean>{
+        var mLiveDate = MutableLiveData<Boolean>()
         db.collection("user").document(auth.currentUser?.uid.toString())
-            .update(mapOf(
-                "image" to image,
-                "Description" to Desc
-            ))
-            .addOnSuccessListener { Log.d(ContentValues.TAG, "updateUserAccount: ------update user account") }
-            .addOnFailureListener { Log.d(ContentValues.TAG, "updateUserAccount: ------cannot update user account") }
+            .update(
+                mapOf(
+                    "image" to avatar,
+                    "description" to desc
+                )
+            ).addOnSuccessListener {
+                mLiveDate.postValue(true)
+            }.addOnFailureListener {
+                mLiveDate.postValue(false)
+            }
+        return mLiveDate
     }
 
 

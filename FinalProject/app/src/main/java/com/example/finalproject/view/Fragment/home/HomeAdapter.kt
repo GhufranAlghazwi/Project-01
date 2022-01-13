@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finalproject.R
 import com.example.finalproject.model.Post
@@ -15,7 +16,7 @@ import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
 var authintiaction= Firebase.auth
-var postid: String = ""
+var userid: String = ""
 
 class HomeAdapter(var data: List<Post>) : RecyclerView.Adapter<HomeAdapterHolder>() {
     var db = Firebase.firestore
@@ -37,11 +38,10 @@ class HomeAdapter(var data: List<Post>) : RecyclerView.Adapter<HomeAdapterHolder
         holder.likesImageView.setOnClickListener {
 
             val add1ToLike = NumberOfLikes?.plus(1)
-            //val add1 = 1
-            postid = data[position].id.toString()
+            userid = data[position].id.toString()
             Log.d(ContentValues.TAG, "onBindViewHolder: ${add1ToLike}")
 
-            db.collection("posts").document(postid)
+            db.collection("posts").document(userid)
                .update(mapOf(
                     "likes" to add1ToLike
                 ))

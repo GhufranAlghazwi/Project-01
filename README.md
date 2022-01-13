@@ -38,5 +38,5 @@ This is an example you can follow or design yours, no creativity limits
 
 
 **Submission and Deadline**
-Project must be uploaded on Github, with meaningful README.MD file containing the project details. The project should be uploaded in the repo ProjectOne before 06:00PM, 10 jun 2021.
+Project must be uploaded on Github, with meaningful README.MD file containing the project details. The project should be uploaded in the repo ProjectOne before 06:00PM, 10 jun 2021....
 
