@@ -1,4 +1,4 @@
 package com.example.finalproject.model
 
-class Post {
+data class Post(var user: User, var postBody: String, var likes: Int) {
 }
