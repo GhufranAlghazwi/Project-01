@@ -16,19 +16,19 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 import java.util.*
 
-class Repository{
+class Repository {
     var db = FirebaseFirestore.getInstance()
-    lateinit var auth: FirebaseAuth
+    var uid = FirebaseAuth.getInstance().currentUser!!.uid
 
     //get user account from Firebase Firestore
     fun getUserData(): LiveData<Profile> {
 
-        auth = Firebase.auth
+        //auth = Firebase.auth
         val mLivedata = MutableLiveData<Profile>()
 
-        db.collection("user").document(auth.currentUser?.uid.toString())
-            .addSnapshotListener{dr,message ->
-                if(dr != null){
+        db.collection("user").document(uid)
+            .addSnapshotListener { dr, message ->
+                if (dr != null) {
                     mLivedata.postValue(
                         Profile(
                             dr.getString("email").toString(),
@@ -46,19 +46,30 @@ class Repository{
     }
 
     //upload image
-    fun uploadimage(){
+    fun uploadimage() {
 
     }
 
-    //update profile
-    fun updateUserProfile(avatar: String, desc: String): LiveData<Boolean>{
+    //update image profile
+    fun updateUserProfile(avatar: String): LiveData<Boolean> {
         var mLiveDate = MutableLiveData<Boolean>()
-        db.collection("user").document(auth.currentUser?.uid.toString())
+        db.collection("user").document(uid)
             .update(
-                mapOf(
-                    "image" to avatar,
-                    "description" to desc
-                )
+                "image" , avatar
+                ).addOnSuccessListener {
+                mLiveDate.postValue(true)
+            }.addOnFailureListener {
+                mLiveDate.postValue(false)
+            }
+        return mLiveDate
+    }
+
+    //update image profile
+    fun updateUserBio(bio: String): LiveData<Boolean> {
+        var mLiveDate = MutableLiveData<Boolean>()
+        db.collection("user").document(uid)
+            .update(
+                "description" , bio
             ).addOnSuccessListener {
                 mLiveDate.postValue(true)
             }.addOnFailureListener {

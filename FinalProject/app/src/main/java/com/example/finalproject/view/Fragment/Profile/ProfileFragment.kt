@@ -45,10 +45,11 @@ lateinit var imageUri: String
 
         val vm: ProfileFragmentViewModel by viewModels()
 
-        vm.getUserAccount().observe(this,{
+        vm.getUserAccount().observe(viewLifecycleOwner,{
             username.setText("@${it.Username}")
             name.setText(it.Name)
-            Picasso.get().load(Uri.parse(it.avatar)).into(image)
+            if (it.avatar!!.isNotBlank())
+                Picasso.get().load(it.avatar).into(image)
             Desc.text = Editable.Factory.getInstance().newEditable(it.description.toString())
             val listDate = it.date?.split(" ")
             dateTV.text = listDate!![1]+ " " + listDate!!.last()
@@ -67,7 +68,7 @@ lateinit var imageUri: String
 
         updateButton.setOnClickListener {
             //var user = Profile(saveEmail,saveUsername,saveName,imageUri,Desc.text.toString(),saveDate)
-            vm.updateUserProfile(imageUri,Desc.text.toString() ).observe(this, {
+            vm.updateUserBio(Desc.text.toString() ).observe(this, {
                 if (it)
                     Toast.makeText(this.context, "Profile updated successfully", Toast.LENGTH_SHORT).show()
                 else
@@ -101,6 +102,12 @@ lateinit var imageUri: String
             val uri: Uri = data?.data!!
             imageUri = uri.toString()
             image.setImageURI(uri)
+            ProfileFragmentViewModel().updateUserProfile(imageUri,).observe(this, {
+                if (it)
+                    Toast.makeText(this.context, "Profile updated successfully", Toast.LENGTH_SHORT).show()
+                else
+                    Toast.makeText(this.context, "Failed to update", Toast.LENGTH_SHORT).show()
+            })
         } else if (resultCode == ImagePicker.RESULT_ERROR) {
             Toast.makeText(this.context, ImagePicker.getError(data), Toast.LENGTH_SHORT).show()
         } else {

@@ -10,7 +10,7 @@ data class Profile(
     val Email: String?,
     val Username: String?,
     val Name: String?,
-    val avatar: String?,
+    val avatar: String,
     val description: String?,
     val date: String?
 )

@@ -17,8 +17,12 @@ class ProfileFragmentViewModel: ViewModel(){
     }
 
 
-    fun updateUserProfile(avatar: String, desc: String): LiveData<Boolean>{
-        return user.updateUserProfile(avatar, desc)
+    fun updateUserProfile(avatar: String): LiveData<Boolean>{
+        return user.updateUserProfile(avatar)
+    }
+
+    fun updateUserBio(bio: String): LiveData<Boolean>{
+        return user.updateUserBio(bio)
     }
 
 
