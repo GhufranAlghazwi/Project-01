@@ -47,9 +47,11 @@ class NewPostActivity : AppCompatActivity() {
 
         var name = ""
         var username = ""
+        var avatar = ""
         vm.getUserAccount().observe(this, {
             name = it.Name!!
             username = it.Username!!
+            avatar = it.avatar!!
 
         })
 
@@ -58,7 +60,7 @@ class NewPostActivity : AppCompatActivity() {
             val post = hashMapOf(
                 "username" to username,
                 "name" to name,
-                "avatar" to null,
+                "avatar" to avatar,
                 "postBody" to binding.postEditText.text.toString(),
                 "likes" to 0,
                 "postTime" to date
