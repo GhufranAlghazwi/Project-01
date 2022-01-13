@@ -1,5 +1,6 @@
 package com.example.finalproject.view.Fragment.Profile
 
+import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -42,8 +43,20 @@ class ProfileFragment : Fragment() {
             Picasso.get().load(image).into(image)
         }*/
         logoutButton.setOnClickListener {
-            val intent = Intent(this.context, LoginActivity::class.java)
-            startActivity(intent)
+            val alertDialog = AlertDialog.Builder(this.context)
+            alertDialog.setTitle("Logout")
+            alertDialog.setMessage("Are you sure you want to logout")
+            alertDialog.setPositiveButton("Logout"){ dialog, which ->
+                val intent = Intent(this.context, LoginActivity::class.java)
+                startActivity(intent)
+
+            }
+            alertDialog.setNegativeButton("Cancel"){dialog,which ->
+                dialog.cancel()
+            }
+            val exitdialog = alertDialog.create()
+            exitdialog.show()
+
 
         }
 
