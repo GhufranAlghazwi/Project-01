@@ -6,14 +6,9 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.inputmethod.InputMethodManager
-import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.viewModels
-import com.example.finalproject.R
-import com.example.finalproject.Repository.Repository
 import com.example.finalproject.databinding.ActivityNewPostBinding
-import com.example.finalproject.model.Post
 import com.example.finalproject.view.Fragment.Profile.ProfileFragmentViewModel
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase

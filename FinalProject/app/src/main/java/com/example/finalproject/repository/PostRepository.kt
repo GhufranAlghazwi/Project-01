@@ -1,4 +1,4 @@
-package com.example.finalproject.Repository
+package com.example.finalproject.repository
 
 import androidx.lifecycle.MutableLiveData
 import com.example.finalproject.model.Post
