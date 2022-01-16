@@ -112,10 +112,6 @@ class ProfileFragment : Fragment() {
             image.setImageURI(uri)
             db.collection("user").document(uid!!)
                 .update("image", uri.toString())
-
-            db.collection("posts").document(uid!!)
-                .update("avatar", uri.toString())
-
         } else if (resultCode == ImagePicker.RESULT_ERROR) {
             Toast.makeText(this.context, ImagePicker.getError(data), Toast.LENGTH_SHORT).show()
         } else {

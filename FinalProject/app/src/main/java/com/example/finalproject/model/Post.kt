@@ -9,7 +9,7 @@ data class Post(
     var id:String?= "",
     var username: String,
     var name: String,
-    var avatar: String?,
+    //var avatar: String?,
     var postBody: String,
     var likes: Double,
     var time: Date?,
