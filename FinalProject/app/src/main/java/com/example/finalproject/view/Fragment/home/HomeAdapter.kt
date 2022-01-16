@@ -14,6 +14,7 @@ import com.example.finalproject.model.Post
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
+import com.squareup.picasso.Picasso
 
 var authintiaction= Firebase.auth
 var userid: String = ""
@@ -31,6 +32,7 @@ class HomeAdapter(var data: List<Post>) : RecyclerView.Adapter<HomeAdapterHolder
         holder.username.text = "@"+data[position].username
         holder.post.text = data[position].postBody
         holder.likeNo.text = data[position].likes.toInt().toString()
+        //Picasso.get().load(data[position].avatar).into(holder.avatar)
 
         val NumberOfLikes = data[position].likes
 
@@ -56,7 +58,7 @@ class HomeAdapter(var data: List<Post>) : RecyclerView.Adapter<HomeAdapterHolder
 class HomeAdapterHolder(v: View) : RecyclerView.ViewHolder(v) {
     var name = v.findViewById<TextView>(R.id.nameTextView)
     var username = v.findViewById<TextView>(R.id.userNameTextView)
-    var avatar = v.findViewById<ImageView>(R.id.profile_image)
+    //var avatar = v.findViewById<ImageView>(R.id.profile_image)
     var post = v.findViewById<TextView>(R.id.postBodyTextView)
     var likesImageView = v.findViewById<ImageView>(R.id.imageViewlike)
     var likeNo = v.findViewById<TextView>(R.id.textViewLikeNo)

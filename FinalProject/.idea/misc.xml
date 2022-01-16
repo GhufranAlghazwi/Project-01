@@ -3,32 +3,30 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/ASUS/Desktop/Ryiadh-project/Project-01/FinalProject/app/src/main/res/layout/activity_login.xml" value="0.264" />
+        <entry key="..\:/Users/ASUS/Desktop/Ryiadh-project/Project-01/FinalProject/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/ASUS/Desktop/Ryiadh-project/Project-01/FinalProject/app/src/main/res/layout/activity_new_post.xml" value="0.16302083333333334" />
+        <entry key="..\:/Users/ASUS/Desktop/Ryiadh-project/Project-01/FinalProject/app/src/main/res/layout/activity_register.xml" value="0.264" />
+        <entry key="..\:/Users/ASUS/Desktop/Ryiadh-project/Project-01/FinalProject/app/src/main/res/layout/activity_splash_screen.xml" value="0.264" />
+        <entry key="..\:/Users/ASUS/Desktop/Ryiadh-project/Project-01/FinalProject/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/Desktop/Ryiadh-project/Project-01/FinalProject/app/src/main/res/layout/fragment_profile.xml" value="0.264" />
+        <entry key="..\:/Users/ASUS/Desktop/Ryiadh-project/Project-01/FinalProject/app/src/main/res/layout/list_row_post.xml" value="0.4" />
+        <entry key="..\:/Users/ASUS/Desktop/Ryiadh-project/Project-01/FinalProject/app/src/main/res/layout/side_slide.xml" value="0.15104166666666666" />
+        <entry key="..\:/Users/ASUS/Desktop/Ryiadh-project/Project-01/FinalProject/app/src/main/res/menu/main_menu.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/Desktop/Ryiadh-project/Project-01/FinalProject/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.19739583333333333" />
         <entry key="..\:/Users/gahg/Desktop/Riyadh-project/Project-01/FinalProject/app/src/main/res/drawable/ic_baseline_share_24.xml" value="0.21614583333333334" />
-        <entry key="..\:/Users/gahg/Desktop/Riyadh-project/Project-01/FinalProject/app/src/main/res/drawable/ic_message.xml" value="0.1648148148148148" />
-        <entry key="..\:/Users/gahg/Desktop/Riyadh-project/Project-01/FinalProject/app/src/main/res/layout/activity_login.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/gahg/Desktop/Riyadh-project/Project-01/FinalProject/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/Users/gahg/Desktop/Riyadh-project/Project-01/FinalProject/app/src/main/res/layout/activity_new_post.xml" value="0.1105072463768116" />
-        <entry key="..\:/Users/gahg/Desktop/Riyadh-project/Project-01/FinalProject/app/src/main/res/layout/activity_register.xml" value="0.2" />
         <entry key="..\:/Users/gahg/Desktop/Riyadh-project/Project-01/FinalProject/app/src/main/res/layout/activity_splash_screen.xml" value="0.25" />
         <entry key="..\:/Users/gahg/Desktop/Riyadh-project/Project-01/FinalProject/app/src/main/res/layout/fragment_home.xml" value="0.11911231884057971" />
-        <entry key="..\:/Users/gahg/Desktop/Riyadh-project/Project-01/FinalProject/app/src/main/res/layout/fragment_new_post.xml" value="0.16666666666666666" />
-        <entry key="..\:/Users/gahg/Desktop/Riyadh-project/Project-01/FinalProject/app/src/main/res/layout/fragment_profile.xml" value="0.184375" />
-        <entry key="..\:/Users/gahg/Desktop/Riyadh-project/Project-01/FinalProject/app/src/main/res/layout/list_row_post.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/gahg/Desktop/Riyadh-project/Project-01/FinalProject/app/src/main/res/layout/list_row_post.xml" value="0.1" />
         <entry key="..\:/Users/gahg/Desktop/Riyadh-project/Project-01/FinalProject/app/src/main/res/menu/main_menu.xml" value="0.1" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.22" />
-      </ProjectState>
-    </option>
   </component>
 </project>
